@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tugas Akhir Membuat Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Website Tugas Akhir Membuat Website</h1>
+        <nav>
+            <button id="menu-button">☰ Menu</button>
+            <ul id="menu" class="hidden">
+                <li style="text-align: left;"><a href="#">Beranda</a></li>
+                <li style="text-align: center;"><a href="#">Artikel</a></li>
+                <li style="text-align: right;"><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <!-- Artikel 1 -->
+            <article>
+                <h2>Teknologi Terbaru di Tahun 2025</h2>
+                <img src="images/deepseek.jpg" alt="Teknologi Terbaru" style="width:70%; height:auto; margin: 10px auto; display: block;">
+                <p>DeepSeek adalah sebuah sistem berbasis Artificial Intelligence (AI) yang dirancang untuk analisis data kompleks dan penyelesaian masalah menggunakan pendekatan deep learning. Walaupun namanya mirip dengan beberapa proyek AI lain, dalam konteks ini, DeepSeek berfokus pada pemrosesan data besar dan pencarian informasi yang mendalam.</p>
+            </article>
+            
+            <!-- Artikel 2 -->
+            <article>
+                <h2>Framework</h2>
+                <img src="images/Laravel.jpg" alt="Belajar Pemrograman" style="width:70%; height:auto; margin: 10px auto; display: block;">
+                <p>Laravel adalah framework PHP yang bersifat open-source dan dirancang untuk memudahkan proses pengembangan aplikasi web. Dibuat oleh Taylor Otwell pada tahun 2011, Laravel menggunakan arsitektur MVC (Model-View-Controller) yang membantu memisahkan logika aplikasi dari antarmuka pengguna.</p>
+            </article>
+        </div>
+        <aside style="padding: 15px;">
+            <h2 style="margin-bottom: 15px;">PROFIL</h2>
+            <div class="slider" style="margin-bottom: 20px;">
+                <div class="slides">
+                    <img src="images/profile1.jpg" alt="Profile 1">
+                    <img src="images/profile2.jpg" alt="Profile 2">
+                    <img src="images/profile3.jpg" alt="Profile 3">
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <p style="margin-top: 15px;"><strong>NAMA:</strong> FARID KURNIAWAN</p>
+            <p style="margin-top: 8px;"><strong>PRODI:</strong> TEKNIK INFORMATIKA</p>
+        </aside>                
+    </main>
+    <footer>
+        <nav>
+            <a href="#" id="tentangKami">Tentang Kami</a> 
+            <a href="#" id="kontak">Kontak</a>
+        </nav>
+    </footer>
+        
+        <!-- POPUP Tentang Kami -->
+        <div class="popup" id="popupTentangKami">
+            <div class="popup-content">
+                <span class="close" data-close="popupTentangKami">&times;</span>
+                <h2>Tentang Kami</h2>
+                <p>Website ini dibuat untuk tujuan edukasi dan pengembangan keterampilan dalam bidang pemrograman web.</p>
+            </div>
+        </div>
+        
+        <!-- POPUP Kontak -->
+        <div class="popup" id="popupKontak">
+            <div class="popup-content">
+                <span class="close" data-close="popupKontak">&times;</span>
+                <h2>Kontak</h2>
+                <p>Email: info@example.com</p>
+                <p>Telepon: +62 123 4567 890</p>
+            </div>
+        </div>       
+</body>
+</html>
