@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM Loaded!");
 
-    // ===== MENU TOGGLE =====
     const menuButton = document.getElementById("menu-button");
     const menu = document.getElementById("menu");
 
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("hidden");
     });
 
-    // ===== SLIDER =====
     let currentSlide = 0;
     const slides = document.querySelector(".slides");
     const totalSlides = document.querySelectorAll(".slides img").length;
@@ -37,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nextSlide();
     }, 3000);
 
-    // ===== ARTIKEL ANIMASI SAAT SCROLL =====
+
     const articles = document.querySelectorAll("article");
 
     const observer = new IntersectionObserver((entries) => {
@@ -52,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(article);
     });
 
-    // ===== POPUP =====
+
     function openPopup(popupId, event) {
         event.preventDefault();
         const popup = document.getElementById(popupId);
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Event Listener untuk tombol buka pop-up
     const tentangKamiBtn = document.getElementById("tentangKami");
     const kontakBtn = document.getElementById("kontak");
 
@@ -80,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
         kontakBtn.addEventListener("click", (e) => openPopup("popupKontak", e));
     }
 
-    // Event Listener untuk tombol close (X)
     document.querySelectorAll(".close").forEach(btn => {
         btn.addEventListener("click", function () {
             const popupId = this.getAttribute("data-close");
@@ -88,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Tutup pop-up saat klik di luar konten
     window.addEventListener("click", function (e) {
         if (e.target.classList.contains("popup")) {
             e.target.style.display = "none";
